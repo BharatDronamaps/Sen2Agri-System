@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="DISPLAY/display.xsl"?>
-<Earth_Explorer_File xmlns="http://eop-cfi.esa.int/CFI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="L2COMM_File_Type" schema_version="1.00" xsi:schemaLocation="http://eop-cfi.esa.int/CFI D:\Utilisateurs\petruccib\Documents\PROJETS\MACCS\99-Envois_Utilisateurs\20161123-S2Bgri-GIPP\Schemas-S2\GIP_L2COMM_L2Commons.xsd">
+<Earth_Explorer_File xmlns="http://eop-cfi.esa.int/CFI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="L2COMM_File_Type" schema_version="1.00" xsi:schemaLocation="http://eop-cfi.esa.int/CFI D:\Utilisateurs\petruccib\Documents\PROJETS\MACCS\99-Envois_Utilisateurs\20161123-S2Agri-GIPP\Schemas-S2\GIP_L2COMM_L2Commons.xsd">
 	<Earth_Explorer_Header>
 		<Fixed_Header>
 			<File_Name>S2B_TEST_GIP_L2COMM_L_ALLSITES_10006_20150703_21000101</File_Name>
@@ -13,12 +13,12 @@
 				<Validity_Start>UTC=2015-07-03T00:00:00</Validity_Start>
 				<Validity_Stop>UTC=2100-01-01T00:00:00</Validity_Stop>
 			</Validity_Period>
-			<File_Version>0007</File_Version>
+			<File_Version>0008</File_Version>
 			<Source>
 				<System>MACCS</System>
 				<Creator>CNES_tool</Creator>
 				<Creator_Version>1.0</Creator_Version>
-				<Creation_Date>UTC=2016-11-23T17:36:00</Creation_Date>
+				<Creation_Date>UTC=2018-05-30T00:00:00</Creation_Date>
 			</Source>
 		</Fixed_Header>
 		<Variable_Header>
@@ -128,7 +128,7 @@
                  note: 1 jacobson = 1000 dobson. 1 kg[O3]/m2 = 46698 dobson -->
 			<Ozone_Amount_Default_Value>0.300</Ozone_Amount_Default_Value>
 			<!-- Water amount value (used if Use_Water_Amount set to true) -->
-			<Water_Amount_Default_Value>0</Water_Amount_Default_Value>
+			<Water_Amount_Default_Value>2</Water_Amount_Default_Value>
 		</Atmospheric_Absorption_Correction>
 		<Rayleigh_Correction>
 			<!-- Default value of AOT for the Rayleigh correction -->
@@ -146,9 +146,9 @@
 			<!--  Minimum percentage of cirrus clouds within the image to raise the cirrus flag -->
 			<Min_Percent_Mask_Cirrus>100</Min_Percent_Mask_Cirrus>
 			<!-- Offset for reflectance threshold to detect a cirrus -->
-			<Cirrus_Mask_Threshold_Offset>0.015</Cirrus_Mask_Threshold_Offset>
+			<Cirrus_Mask_Threshold_Offset>0.010</Cirrus_Mask_Threshold_Offset>
 			<!-- Gain for reflectance threshold to detect a cirrus -->
-			<Cirrus_Mask_Threshold_Gain>0.00002</Cirrus_Mask_Threshold_Gain>
+			<Cirrus_Mask_Threshold_Gain>0.000015</Cirrus_Mask_Threshold_Gain>
 		</Cirrus_Mask>
 		<Snow_Masking>
 			<!--  Structuring element for dilatation of the snow mask -->
@@ -170,21 +170,21 @@
 			<!-- Band used for absolute thresholding of reflectance over water zones (SWIR when available, NIR otherwise) -->
 			<Reflectance_Water_Band_Code>B12</Reflectance_Water_Band_Code>
 			<!-- Band code identifier used for the correlation to avoid false cloud detection -->
-			<Correl_Band_Code>B2</Correl_Band_Code>
+			<Correl_Band_Code>B4</Correl_Band_Code>
 			<!-- Band code identifier used for the shadow detection -->
 			<Shadow_Band_Code>B4</Shadow_Band_Code>
 			<!-- Spectral band code identifier used as reference for viewing directions -->
 			<CLD_Viewing_Direction_Band_Code>B3</CLD_Viewing_Direction_Band_Code>
 			<!-- Threshold on surface reflectance in the blue band -->
-			<Reflectance_Threshold>0.25</Reflectance_Threshold>
+			<Reflectance_Threshold>0.2</Reflectance_Threshold>
 			<!-- Threshold of correlation between images of date D and D-1 -->
 			<Correl_Threshold>80</Correl_Threshold>
 			<!-- Radius of the input masks (water and snow) dilatation -->
 			<SE_Input_Masks_Radius>1</SE_Input_Masks_Radius>
 			<!-- Threshold on surface reflectance in the Refl_water_band band for pixels declared water (if sunglint_flag is False) -->
-			<Water_Reflectance_Threshold>0.08</Water_Reflectance_Threshold>
+			<Water_Reflectance_Threshold>0.04</Water_Reflectance_Threshold>
 			<!-- Threshold on surface reflectance in the Refl_water_band band for pixels declared water (if sunglint_flag is True) -->
-			<Water_Sunglint_Reflectance_Threshold>0.25</Water_Sunglint_Reflectance_Threshold>
+			<Water_Sunglint_Reflectance_Threshold>0.16</Water_Sunglint_Reflectance_Threshold>
 			<!-- Minimum Threshold on surface reflectance variation with time in the blue band -->
 			<Min_Threshold_Var_Blue>0.025</Min_Threshold_Var_Blue>
 			<!-- Maximum Threshold on surface reflectance variation with time in the blue band -->
@@ -222,11 +222,11 @@
 			<!-- Threshold on the number of pixels to use either shadowCloudRatioMax or shadowCloudRatioMin -->
 			<Shadow_Cloud_Ratio_Pix_Nb>10</Shadow_Cloud_Ratio_Pix_Nb>
 			<!-- Maximum value for the darkening threshold used to determine shadows zones (by projection) -->
-			<Proj_Shad_Darkening_Max>0.8</Proj_Shad_Darkening_Max>
+			<Proj_Shad_Darkening_Max>0.65</Proj_Shad_Darkening_Max>
 			<!-- Minimum percentile value used to determine the threshold for projected shadows -->
 			<Darkening_Min_Percentile>10</Darkening_Min_Percentile>
 			<!-- Multiplicative coefficient of the cloud cover percentage used for the determination of darkening threshold -->
-			<Cloud_Cover_Mult_Factor>2.</Cloud_Cover_Mult_Factor>
+			<Cloud_Cover_Mult_Factor>1.1</Cloud_Cover_Mult_Factor>
 			<!-- Maximum value for the darkening threshold used to determine shadows zones (in the “radiometric” zone) -->
 			<Shad_Var_Darkening_Max>0.2</Shad_Var_Darkening_Max>
 			<!-- Percentile used to determine the darkening threshold for the shadows (located in the “radiometric zone”) -->
