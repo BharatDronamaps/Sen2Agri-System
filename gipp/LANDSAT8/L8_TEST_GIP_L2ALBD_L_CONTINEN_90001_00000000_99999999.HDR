@@ -4,7 +4,7 @@
         <File_Name>L8_TEST_GIP_L2ALBD_L_CONTINEN_90001_00000000_99999999</File_Name>
         <File_Description>L2LutOfDirectTransmission</File_Description>
         <Notes>String</Notes>
-        <Mission>LANDSAT8</Mission>
+        <Mission>LANDSAT_8</Mission>
         <File_Class>TEST</File_Class>
         <File_Type>GIP_L2ALBD</File_Type>
         <Validity_Period>
@@ -13,7 +13,7 @@
         </Validity_Period>
         <File_Version>0001</File_Version>
         <Source>
-            <System>MAJA</System>
+            <System>MACCS</System>
             <Creator>CNES_tool</Creator>
             <Creator_Version>1.0</Creator_Version>
             <Creation_Date>UTC=2007-10-02T10:54:44</Creation_Date>

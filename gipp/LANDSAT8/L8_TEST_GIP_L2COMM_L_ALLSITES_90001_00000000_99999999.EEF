@@ -6,7 +6,7 @@
             <File_Name>L8_TEST_GIP_L2COMM_L_ALLSITES_90001_00000000_99999999</File_Name>
             <File_Description>L2CommonParameters</File_Description>
             <Notes/>
-            <Mission>LANDSAT8</Mission>
+            <Mission>LANDSAT_8</Mission>
             <File_Class>TEST</File_Class>
             <File_Type>GIP_L2COMM</File_Type>
             <Validity_Period>
@@ -15,7 +15,7 @@
             </Validity_Period>
             <File_Version>0001</File_Version>
             <Source>
-                <System>MAJA</System>
+                <System>MACCS</System>
                 <Creator>CNES_tool</Creator>
                 <Creator_Version>1.0</Creator_Version>
                 <Creation_Date>UTC=2010-03-02T10:54:44</Creation_Date>
@@ -44,6 +44,7 @@
         <Common_Parameters>
             <!-- No data value -->
             <No_Data>-10000</No_Data>
+            <TOA_Quantification_Value>0.001</TOA_Quantification_Value>
             <!-- Maximum percentage of NoData pixels for the product to be considered as valid -->
             <Max_No_Data_Percentage>99</Max_No_Data_Percentage>
             <!-- Maximum percentage of cloudy pixels for the product to be considered as valid (in percentage) -->
@@ -166,15 +167,7 @@
             <!-- Band code identifier used for the shadow detection -->
             <Shadow_Band_Code>B4</Shadow_Band_Code>
             <!-- Threshold on surface reflectance in the blue band -->
-            <Cloud_Blue_Reflectance_Threshold>0.22</Cloud_Blue_Reflectance_Threshold>
-            <!-- Threshold on surface reflectance in the red band -->
-            <Cloud_Red_Reflectance_Threshold>0.15</Cloud_Red_Reflectance_Threshold>
-            <!-- Red Swir Ratio max threshold -->
-            <Nir_Red_Ratio_Max_Threshold>2</Nir_Red_Ratio_Max_Threshold>
-            <!-- Red Swir Ratio min threshold -->
-            <Nir_Red_Ratio_Min_Threshold>0.8</Nir_Red_Ratio_Min_Threshold>
-            <!-- Nir Swir Ratio min threshold -->
-            <Nir_Swir_Ratio_Min_Threshold>1</Nir_Swir_Ratio_Min_Threshold>
+            <Reflectance_Threshold>0.22</Reflectance_Threshold>
             <!-- Threshold of correlation between images of date D and D-1 -->
             <Correl_Threshold>80</Correl_Threshold>
             <!-- Radius of the input masks (water and snow) dilatation -->
