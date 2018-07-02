@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Earth_Explorer_File xmlns="http://eop-cfi.esa.int/CFI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="L2COMM_File_Type" schema_version="0.40" xsi:schemaLocation="http://eop-cfi.esa.int/CFI GIP_L2COMM_L2Commons.xsd">
+<Earth_Explorer_File xmlns="http://eop-cfi.esa.int/CFI" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="L2COMM_File_Type" schema_version="0.40" xsi:schemaLocation="http://eop-cfi.esa.int/CFI GIP_L2COMM_L2Commons.xsd">
     <Earth_Explorer_Header>
         <Fixed_Header>
             <File_Name>L8_TEST_GIP_L2COMM_L_ALLSITES_90001_00000000_99999999</File_Name>
@@ -106,7 +107,7 @@
             <!-- Threshold to consider a L2 resolution pixel as saturated -->
             <Saturation_Threshold>1.3</Saturation_Threshold>
             <!-- Threshold to consider a L2 coarse resolution image as saturated -->
-            <Saturation_Threshold_Sub>0.900<Saturation_Threshold_Sub>
+            <Saturation_Threshold_Sub>0.900</Saturation_Threshold_Sub>
         </Subsampling>
         <DTM_Processing>
             <!--Spectral bands used in the DTM processing -->
@@ -115,7 +116,7 @@
             <Distance_Threshold>240.00</Distance_Threshold>
         </DTM_Processing>
         <Atmospheric_Absorption_Correction>
-            <!-- Ozone amount value at the center of the image (used if Use_Ozone_Amount set to true) unit: cm.atm = jacobson 
+            <!-- Ozone amount value at the center of the image (used if Use_Ozone_Amount set to true) unit: cm.atm = jacobson
            note: 1 jacobson = 1000 dobson. 1 kg[O3]/m2 = 46698 dobson -->
             <Ozone_Amount_Default_Value>0.300</Ozone_Amount_Default_Value>
             <!-- Water amount value (used if Use_Water_Amount set to true) -->
@@ -179,9 +180,9 @@
             <!-- Radius of the input masks (water and snow) dilatation -->
             <SE_Input_Masks_Radius>1</SE_Input_Masks_Radius>
             <!-- Threshold on surface reflectance in the Refl_water_band band for pixels declared water (if sunglint_flag is False) -->
-            <Water_Reflectance_Threshold>0.08</Water_Reflectance_Threshold>
+            <Water_Reflectance_Threshold>0.04</Water_Reflectance_Threshold>
             <!-- Threshold on surface reflectance in the Refl_water_band band for pixels declared water (if sunglint_flag is True) -->
-            <Water_Sunglint_Reflectance_Threshold>0.25</Water_Sunglint_Reflectance_Threshold>
+            <Water_Sunglint_Reflectance_Threshold>0.16</Water_Sunglint_Reflectance_Threshold>
             <!-- Minimum Threshold on surface reflectance variation with time in the blue band -->
             <Min_Threshold_Var_Blue>0.025</Min_Threshold_Var_Blue>
             <!-- Maximum Threshold on surface reflectance variation with time in the blue band -->
@@ -231,7 +232,7 @@
             <!-- Minimum ratio of pixels (at the shadow label level) that have to be already declared as shadow (shadvar) in the previous cloud mask in order to discard the detection -->
             <Shad_Var_Composite_Label_Ratio>0.8</Shad_Var_Composite_Label_Ratio>
             <!-- Radius of the structuring element for cloud dilation-->
-            <SE_Cloud_Radius>0</SE_Cloud_Radius>
+            <SE_Cloud_Radius>1</SE_Cloud_Radius>
         </Cloud_Masking>
         <Water_Masking>
             <!-- Number of possible water masks necessary to create the water mask of date D, ie. number of masks available in the PWA and TWA masks -->
